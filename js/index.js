@@ -90,7 +90,7 @@ botimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 // Copyright is here
 
-let contact = document.querySelectorAll(".contact p");
+const contact = document.querySelectorAll(".contact p");
 contact[0].textContent = "123 Way 456 Street\r\nSomewhere, USA"
 contact[0].setAttribute('style', 'white-space: pre;')
 contact[1].textContent = siteContent["contact"]["phone"];
@@ -104,19 +104,26 @@ footerP.textContent = siteContent["footer"]["copyright"];
 // New content will be added here
 
 // Green color
-for (var i = 0; i < links.length; i++) {
-  links[i].style.color = 'green';
-}
+links.forEach(things => {
+  things.style.color = 'green';
+})
 
 // New element [with prepend and append]
 const newContent = document.createElement("text-content");
 const h4 = document.createElement("h4");
 const p = document.createElement("p");
-h4.style.color = "blue";
+h4.textContent = "Some Extra";
+p.textContent = siteContent["main-content"]["vision-content"];
+newContent.style.color = "darkblue";
 
-newContent.prepend("Some Extra", h4);
-newContent.append(siteContent["main-content"]["vision-content"], p);
+newContent.prepend(h4);
+newContent.append(p);
 
 const inside = document.querySelector('.top-content');
 inside.prepend(newContent);
 
+// New styles
+let stylesNew = document.querySelectorAll(".bottom-content .text-content p");
+stylesNew[0].style.backgroundColor = "lightgray";
+stylesNew[1].style.border = "1px solid black";
+stylesNew[2].style.backgroundColor = "lightgray";
