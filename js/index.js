@@ -127,3 +127,19 @@ let stylesNew = document.querySelectorAll(".bottom-content .text-content p");
 stylesNew[0].style.backgroundColor = "lightgray";
 stylesNew[1].style.border = "1px solid black";
 stylesNew[2].style.backgroundColor = "lightgray";
+
+// New links
+const navBar = document.querySelector('nav');
+
+let nav1 = document.createElement('a');
+nav1.textContent = "Dom";
+
+
+let nav2 = document.createElement('a');
+nav2.textContent = "JavaScript";
+
+navBar.appendChild(nav1);
+navBar.prepend(nav2);
+
+nav1.style.color = "green";
+nav2.style.color = "green";
