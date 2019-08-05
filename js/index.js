@@ -46,7 +46,7 @@ const slogan = document.getElementById("cta-img");
 slogan.setAttribute('src', siteContent["cta"]["img-src"]);
 
 // Nav titles is here
-const links = document.querySelectorAll('a');
+const links = document.querySelectorAll("a");
 links[0].textContent = siteContent["nav"]["nav-item-1"];
 links[1].textContent = siteContent["nav"]["nav-item-2"];
 links[2].textContent = siteContent["nav"]["nav-item-3"];
@@ -55,9 +55,25 @@ links[4].textContent = siteContent["nav"]["nav-item-5"];
 links[5].textContent = siteContent["nav"]["nav-item-6"];
 
 // Main sign and button
-const ctaSign = document.querySelector('h1');
+const ctaSign = document.querySelector("h1");
 ctaSign.textContent = siteContent["cta"]["h1"]
 
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 button.textContent = siteContent["cta"]["button"];
 
+// Bottom text here
+
+const mainHeaders = document.querySelectorAll(".text-content > h4");
+mainHeaders[0].textContent = siteContent["main-content"]["features-h4"];
+mainHeaders[1].textContent = siteContent["main-content"]["about-h4"];
+mainHeaders[2].textContent = siteContent["main-content"]["services-h4"];
+mainHeaders[3].textContent = siteContent["main-content"]["product-h4"];
+mainHeaders[4].textContent = siteContent["main-content"]["vision-h4"];
+
+const mainText = document.querySelectorAll(".text-content > p");
+// console.log(mainText);
+mainText[0].textContent = siteContent["main-content"]["features-content"];
+mainText[1].textContent = siteContent["main-content"]["about-content"];
+mainText[2].textContent = siteContent["main-content"]["services-content"];
+mainText[3].textContent = siteContent["main-content"]["product-content"];
+mainText[4].textContent = siteContent["main-content"]["vision-content"];
