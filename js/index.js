@@ -46,7 +46,7 @@ const slogan = document.getElementById("cta-img");
 slogan.setAttribute('src', siteContent["cta"]["img-src"]);
 
 // Nav titles is here
-const links = document.querySelectorAll("a");
+const links = document.querySelectorAll("nav > a");
 links[0].textContent = siteContent["nav"]["nav-item-1"];
 links[1].textContent = siteContent["nav"]["nav-item-2"];
 links[2].textContent = siteContent["nav"]["nav-item-3"];
@@ -83,6 +83,7 @@ const botimg = document.getElementById("middle-img");
 botimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 // Copyright is here
+
 const contactH4 = document.querySelector(".contact > h4");
 contactH4.textContent = siteContent["contact"]["contact-h4"];
 
@@ -91,7 +92,28 @@ contactP[0].textContent = siteContent["contact"]["address"];
 contactP[1].textContent = siteContent["contact"]["phone"];
 contactP[2].textContent = siteContent["contact"]["email"];
 
-// New footer will be here
+// Footer will be here
 
 const footerP = document.querySelector("footer > p");
 footerP.textContent = siteContent["footer"]["copyright"];
+
+// New content will be added here
+
+// Green color
+links[0].style.color = 'green';
+links[1].style.color = 'green';
+links[2].style.color = 'green';
+links[3].style.color = 'green';
+links[4].style.color = 'green';
+links[5].style.color = 'green';
+
+// New element [with prepend and append]
+const newContent = document.createElement("text-content");
+const h4 = document.createElement("h4");
+const p = document.createElement("p");
+
+newContent.prepend("Some Extra", h4);
+newContent.append(siteContent["main-content"]["vision-content"], p);
+
+const nav = document.querySelector('.top-content');
+nav.prepend(newContent);
