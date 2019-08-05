@@ -54,14 +54,14 @@ links[3].textContent = siteContent["nav"]["nav-item-4"];
 links[4].textContent = siteContent["nav"]["nav-item-5"];
 links[5].textContent = siteContent["nav"]["nav-item-6"];
 
-// Main sign and button
+// Upper sign and button
 const ctaSign = document.querySelector("h1");
 ctaSign.textContent = siteContent["cta"]["h1"]
 
 const button = document.querySelector("button");
 button.textContent = siteContent["cta"]["button"];
 
-// Bottom text here
+// Main text here
 
 const mainHeaders = document.querySelectorAll(".text-content > h4");
 mainHeaders[0].textContent = siteContent["main-content"]["features-h4"];
@@ -81,3 +81,17 @@ mainText[4].textContent = siteContent["main-content"]["vision-content"];
 
 const botimg = document.getElementById("middle-img");
 botimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// Copyright is here
+const contactH4 = document.querySelector(".contact > h4");
+contactH4.textContent = siteContent["contact"]["contact-h4"];
+
+const contactP = document.querySelectorAll(".contact > p");
+contactP[0].textContent = siteContent["contact"]["address"];
+contactP[1].textContent = siteContent["contact"]["phone"];
+contactP[2].textContent = siteContent["contact"]["email"];
+
+// New footer will be here
+
+const footerP = document.querySelector("footer > p");
+footerP.textContent = siteContent["footer"]["copyright"];
