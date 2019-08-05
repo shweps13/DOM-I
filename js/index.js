@@ -47,6 +47,11 @@ slogan.setAttribute('src', siteContent["cta"]["img-src"]);
 
 // Nav titles is here
 const links = document.querySelectorAll("nav > a");
+// links.forEach(things => {
+//   console.log(things);
+//   things.textContent = siteContent["nav"]['nav-item-1'];
+// })
+
 links[0].textContent = siteContent["nav"]["nav-item-1"];
 links[1].textContent = siteContent["nav"]["nav-item-2"];
 links[2].textContent = siteContent["nav"]["nav-item-3"];
@@ -55,8 +60,9 @@ links[4].textContent = siteContent["nav"]["nav-item-5"];
 links[5].textContent = siteContent["nav"]["nav-item-6"];
 
 // Upper sign and button
-const ctaSign = document.querySelector("h1");
-ctaSign.textContent = siteContent["cta"]["h1"]
+const headline = document.querySelector('h1');
+headline.textContent = "DOM\r\nIs\r\nAwesome"
+headline.setAttribute('style', 'white-space: pre;')
 
 const button = document.querySelector("button");
 button.textContent = siteContent["cta"]["button"];
@@ -84,13 +90,11 @@ botimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 // Copyright is here
 
-const contactH4 = document.querySelector(".contact > h4");
-contactH4.textContent = siteContent["contact"]["contact-h4"];
-
-const contactP = document.querySelectorAll(".contact > p");
-contactP[0].textContent = siteContent["contact"]["address"];
-contactP[1].textContent = siteContent["contact"]["phone"];
-contactP[2].textContent = siteContent["contact"]["email"];
+let contact = document.querySelectorAll(".contact p");
+contact[0].textContent = "123 Way 456 Street\r\nSomewhere, USA"
+contact[0].setAttribute('style', 'white-space: pre;')
+contact[1].textContent = siteContent["contact"]["phone"];
+contact[2].textContent = siteContent["contact"]["email"];
 
 // Footer will be here
 
@@ -100,20 +104,19 @@ footerP.textContent = siteContent["footer"]["copyright"];
 // New content will be added here
 
 // Green color
-links[0].style.color = 'green';
-links[1].style.color = 'green';
-links[2].style.color = 'green';
-links[3].style.color = 'green';
-links[4].style.color = 'green';
-links[5].style.color = 'green';
+for (var i = 0; i < links.length; i++) {
+  links[i].style.color = 'green';
+}
 
 // New element [with prepend and append]
 const newContent = document.createElement("text-content");
 const h4 = document.createElement("h4");
 const p = document.createElement("p");
+h4.style.color = "blue";
 
 newContent.prepend("Some Extra", h4);
 newContent.append(siteContent["main-content"]["vision-content"], p);
 
-const nav = document.querySelector('.top-content');
-nav.prepend(newContent);
+const inside = document.querySelector('.top-content');
+inside.prepend(newContent);
+
