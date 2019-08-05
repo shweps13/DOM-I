@@ -41,5 +41,23 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// This is the circle img in center
 const slogan = document.getElementById("cta-img");
 slogan.setAttribute('src', siteContent["cta"]["img-src"]);
+
+// Nav titles is here
+const links = document.querySelectorAll('a');
+links[0].textContent = siteContent["nav"]["nav-item-1"];
+links[1].textContent = siteContent["nav"]["nav-item-2"];
+links[2].textContent = siteContent["nav"]["nav-item-3"];
+links[3].textContent = siteContent["nav"]["nav-item-4"];
+links[4].textContent = siteContent["nav"]["nav-item-5"];
+links[5].textContent = siteContent["nav"]["nav-item-6"];
+
+// Main sign and button
+const ctaSign = document.querySelector('h1');
+ctaSign.textContent = siteContent["cta"]["h1"]
+
+const button = document.querySelector('button');
+button.textContent = siteContent["cta"]["button"];
+
